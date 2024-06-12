@@ -103,9 +103,9 @@ class DC_module(nn.Module):
         return pred
 
 # ==============Predictor=====================
-class Predictor(nn.Module):
+class FDCAN(nn.Module):
     def __init__(self, args,sta_h=64,T = 20):
-        super(Predictor, self).__init__()
+        super(FDCAN, self).__init__()
         self.T = T
         self.sta_dense = nn.Sequential(
             nn.Linear(args.static_dim,sta_h),
